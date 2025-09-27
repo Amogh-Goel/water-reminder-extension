@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Water Reminder Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+       background-image: url('Untitled video - Made with Clipchamp.gif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: black;
+      font-family: 'Press Start 2P', cursive;
+      text-align: center;
+      padding: 20px;
+    }
+    h2 {
+      font-size: 14px;
+      margin-bottom: 11px;
+    }
+    .bar-container {
+      width: 100%;
+      height: 30px;
+      border: 3px solid #12fbfa;
+      background: #111;
+      margin: 20px 0;
+      position: relative;
+    }
+    .bar-fill {
+      height: 100%;
+      width: 0%;
+      background: #12fbfa;
+      transition: width 0.3s ease;
+    }
+    .score {
+      margin: 15px 0;
+      font-size: 12px;
+    }
+    button {
+      font-family: inherit;
+      background: #12fbfa;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin: 10px;
+      box-shadow: 2px 2px 0px #333;
+    }
+    button:hover {
+      background: #0054e5;
+    }
+   /* label{
+       width: 100%;
+      height: 30px;
+      border: 3px solid #12fbfa;
+      background: #111;
+      margin: 20px 0;
+      position: relative;
+    }*/
+  </style>
+</head>
+<body>
+  <h2> Hydration Quest!</h2>
+  
+  <div class="score"><b>Score: <span id="score">0</span></b></div>
+  
+  <div class="bar-container">
+    <div class="bar-fill" id="waterBar"></div>
+  </div>
+  
+  <button id="drinkBtn">I Drank Water</button>
+  <br>
+  <label for="interval" >Interval (minutes):</label>
+  <input type="number" id="interval" min="5" value="60">
+  <button id="setReminder">SET</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
