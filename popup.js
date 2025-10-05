@@ -37,7 +37,7 @@ document.getElementById("setReminder").addEventListener("click", () => {
 // popup.js or background.js
 
 function resetDailyProgress() {
-  const today = new Date().toDateString(); // e.g., "Mon Sep 29 2025"
+  const today = new Date().toDateString();
 
   chrome.storage.local.get(["lastDate", "score", "waterLevel"], (data) => {
     if (data.lastDate !== today) {
